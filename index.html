@@ -2,12 +2,37 @@
 <html>
     <head lang="en">
         <meta charset="UTF-8">
-        <title>index</title>
+        <title>Clippy AI</title>
         <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1" initial-scale="1.0">
         <link rel="stylesheet" href="clippy.css">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="chat-panel">
+            <div class="chat-header">Clippy AI Chat</div>
+            <div id="chat-log" class="chat-log"></div>
+            <form id="chat-form" class="chat-form">
+                <input id="chat-input" type="text" placeholder="Ask Clippy anything..." autocomplete="off" required>
+                <button type="submit">Send</button>
+            </form>
+            <details class="chat-settings">
+                <summary>AI settings</summary>
+                <label>
+                    API key
+                    <input id="api-key" type="password" placeholder="sk-...">
+                </label>
+                <label>
+                    Model
+                    <input id="model" type="text" placeholder="gpt-4o-mini">
+                </label>
+                <label>
+                    Endpoint
+                    <input id="endpoint" type="text" placeholder="https://api.openai.com/v1/chat/completions">
+                </label>
+                <button id="save-settings" type="button">Save settings</button>
+            </details>
+        </div>
+
         <script src="third-party.js"></script>
         <script src="script.js"></script>
     </body>
